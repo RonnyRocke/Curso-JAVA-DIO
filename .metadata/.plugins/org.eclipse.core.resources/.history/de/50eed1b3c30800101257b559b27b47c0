@@ -1,0 +1,25 @@
+package exercicios;
+
+public class Product {
+	
+	public String name;
+	public float price;
+	public int quantity;
+	
+	
+	double totalValueStock() {
+		return (double)price*quantity;
+	}
+	void addProducts(int quantity) {
+		this.quantity+=quantity;
+		double totalvalues = quantity*price;
+		System.out.printf("\nUpdate data: %s ,$ %.2f , %d units, Total: $ %.2f ",name, price,quantity,totalvalues);
+
+	}
+	void removeProducts(int quantity) {
+		this.quantity-=quantity;
+		double totalvalues = quantity*price;
+		System.out.printf("\nUpdate data: %s ,$ %.2f , %d units, Total: $ %.2f ",name, price,quantity,totalvalues);
+		
+	}
+}

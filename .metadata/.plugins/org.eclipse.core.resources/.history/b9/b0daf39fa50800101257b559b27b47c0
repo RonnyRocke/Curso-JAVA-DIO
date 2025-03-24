@@ -1,0 +1,49 @@
+package exercicios;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Product p = new Product();
+		int value;
+		double totalValueStock = p.totalValueStock();
+		
+		do {
+			System.out.println("\n1: Iniciar \n2: Sair");
+			value = sc.nextInt();
+
+			if(value==1) {
+			System.out.println("\nEnter Product Data: \nName: ");
+			p.name = sc.nextLine();
+						
+			System.out.println("\nPrice: ");
+			p.price = sc.nextDouble();
+			
+			
+			System.out.println("\nQuantity in stock: ");
+			p.quantity = sc.nextInt();			
+			System.out.printf("\nProduct data: $ %s ,%d units, Total: $ %f ",p.name, p.price,totalValueStock);
+			
+			System.out.print("\nEnter the number of products to be added in stock");
+			p.quantity = sc.nextInt();
+			p.addProducts(p.quantity);
+			
+			System.out.printf("\nUpdate data: $ %s ,%d units, Total: $ %f ",p.name, p.price,totalValueStock);
+
+			}
+			else if(value==2){
+				System.out.println("\nObg Volte sempre!");
+				break;
+			}
+			else {
+				System.out.println("\nOpção Inválida!");
+			}
+			
+		}while(value!=2);
+		
+		sc.close();
+	}
+
+}

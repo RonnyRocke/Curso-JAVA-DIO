@@ -1,0 +1,19 @@
+package exercicios;
+
+public class Product {
+	
+	String name;
+	float price;
+	int quantity;
+	int soma = 0;
+	
+	double totalValueStock() {
+		return (double)price*quantity;
+	}
+	void addProducts(int quantity) {
+		soma+=quantity;
+	}
+	void removeProducts(int quantity) {
+		this.quantity=quantity;	
+	}
+}

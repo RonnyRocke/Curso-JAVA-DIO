@@ -1,0 +1,54 @@
+package exercicios;
+
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Product p = new Product();
+		int value;
+		
+		do {
+			System.out.println("\n\n1: Iniciar \n2: Sair");
+			System.out.println("\nDigite uma opção: ");
+			value = sc.nextInt();
+
+			if(value==1) {
+			System.out.println("\n\nEnter Product Data: \nName: ");
+			p.name = sc.next();
+						
+			System.out.println("\nPrice: ");
+			p.price = sc.nextFloat();
+			
+			
+			System.out.println("\nQuantity in stock: ");
+			p.quantity = sc.nextInt();		
+			p.totalValueStock();
+					
+			System.out.printf("\nProduct data: %s ,$ %.2f , %d units , Total: $ %.2f ",p.name, p.price,p.quantity ,p.totalValueStock());
+			
+			System.out.println("\nEnter att: ");
+			int b = sc.nextInt();
+			p.addProducts(b);
+			System.out.printf("\n\nUpdate data: %s ,$ %.2f , %d units, Total: $ %.2f ",p.name, p.price,p.quantity,p.totalValueStock());
+
+			
+			System.out.println("\nEnter the number of products to remove: ");
+			int c = sc.nextInt();
+			p.removeProducts(c);
+			System.out.println(p);
+			}
+			else if(value==2){
+				System.out.println("\nObg Volte sempre!");
+				break;
+			}
+			else {
+				System.out.println("\nOpção Inválida!");
+			}
+			
+		}while(value!=2);
+		
+		sc.close();
+	}
+
+}
