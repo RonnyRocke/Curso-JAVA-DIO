@@ -1,0 +1,24 @@
+package exercicios2;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Retangle retangle = new Retangle();
+		
+		System.out.println("\nEnter Width and Heigth: ");
+		retangle.width = sc.nextDouble();
+		retangle.heigth = sc.nextDouble();
+		
+		double area = retangle.Area();
+		double perimeter = retangle.Perimeter();
+		double diagonal = retangle.Diagonal();
+		
+		System.out.printf("\nÁrea: ",area);
+		System.out.printf("\nPerimeter: ",perimeter);
+		System.out.printf("\nDiagonal: ",diagonal);
+	}
+}

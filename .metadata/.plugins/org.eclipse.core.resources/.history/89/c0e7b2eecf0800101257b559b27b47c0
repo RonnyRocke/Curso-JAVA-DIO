@@ -1,0 +1,17 @@
+package exercicios2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Retangle retangle = new Retangle();
+		
+		double area = retangle.Area();
+		double perimeter = retangle.Perimeter();
+		double diagonal = retangle.Diagonal();
+		
+		System.out.printf("\nÁrea: ",area);
+		System.out.printf("\nPerimeter: ",perimeter);
+		System.out.printf("\nDiagonal: ",diagonal);
+	}
+}

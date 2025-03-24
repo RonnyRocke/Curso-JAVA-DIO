@@ -18,6 +18,6 @@ public class Product {
 	}
 	public String toString() {
 		
-	     return 	"\nUpdate Remove: "+ name+ ", $" + String.format("%.2f", price)+", " + quantity + " units, $" + totalValueStock();
+		return 	"\nUpdate Remove: "+ name+ ", $" + String.format("%.2f", price)+", " + quantity + " units, $" + totalValueStock();
 	}
 }
